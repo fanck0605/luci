@@ -199,6 +199,11 @@ return view.extend({
 		s.taboption('files', form.DynamicList, 'addnhosts',
 			_('Additional Hosts files')).optional = true;
 
+		o = s.taboption('advanced', form.Flag, 'filteraaaa',
+			_('Filter IPv6 Records'),
+			_('Filter IPv6(AAAA) Records during DNS resolution'));
+		o.optional = true;
+
 		o = s.taboption('advanced', form.Flag, 'quietdhcp',
 			_('Suppress logging'),
 			_('Suppress logging of the routine operation of these protocols'));
